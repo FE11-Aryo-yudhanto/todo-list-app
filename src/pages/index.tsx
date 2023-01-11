@@ -11,7 +11,7 @@ import Layout from '../components/Layout'
 import Loader from '../components/Loader'
 import Input from '../components/Input'
 
-import { useTitle } from '../utils/hooks/CustomHooks'
+import { useTitle } from "../utils/hooks/customHooks";
 import { DatasType } from '../utils/type/todo'
 
 const index = () => {

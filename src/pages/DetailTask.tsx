@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import Button from '../components/Button'
 import Loader from '../components/Loader'
 
-import { useTitle } from '../utils/hooks/CustomHooks'
+import { useTitle } from "../utils/hooks/customHooks";
 import { DetailTaskType } from '../utils/type/todo'
 
 const DetailTask = () => {    
