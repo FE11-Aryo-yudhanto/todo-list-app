@@ -7,19 +7,14 @@ import Layout from '../components/Layout'
 import Button from '../components/Button'
 import Loader from '../components/Loader'
 
-interface DetailTaskType {
-    id?: string
-    content?: string
-    created_at?: string
-    is_completed?: boolean
-    priority?: number
-    url?: string
-}
+import { useTitle } from '../utils/hooks/CustomHooks'
+import { DetailTaskType } from '../utils/type/todo'
 
-const DetailTask = () => {
-    const { id_task } = useParams()
+const DetailTask = () => {    
+    useTitle("Details - Todo List App");
     const [detail, setdetail] = useState<DetailTaskType>({})
     const [loading, setLoading] = useState<boolean>(true)
+    const { id_task } = useParams()
     const navigate = useNavigate();
 
     useEffect(() => {

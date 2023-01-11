@@ -11,19 +11,16 @@ import Layout from '../components/Layout'
 import Loader from '../components/Loader'
 import Input from '../components/Input'
 
-
-interface DatasType {
-  content: string
-  is_completed: boolean
-  id: number
-}
+import { useTitle } from '../utils/hooks/CustomHooks'
+import { DatasType } from '../utils/type/todo'
 
 const index = () => {
-  const [datas, setdatas] = useState<DatasType[]>([])
-  const [inputTask, setInputTask] = useState<string>("")
   const [editContent, setEditContent] = useState<string>("")
-  const [idTask, setIdtask] = useState<number>()
+  const [inputTask, setInputTask] = useState<string>("")
   const [loading, setLoading] = useState<boolean>(true)
+  const [datas, setdatas] = useState<DatasType[]>([])
+  const [idTask, setIdtask] = useState<number>()    
+  useTitle("Home - Todo List App");
   const navigate = useNavigate()
 
   useEffect(() => {
